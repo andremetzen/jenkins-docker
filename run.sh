@@ -1,5 +1,5 @@
-docker run -d -v /lib/x86_64-linux-gnu/libltdl.so.7:/lib/x86_65-linux-gnu/libltdl.so.7 \
+docker run -d \
     -v /var/run/docker.sock:/var/run/docker.sock \
-    -v $(which docker):/usr/bin/docker \
+    -v data:/var/jenkins/home \
     --name=jenkins-docker \
-    -p 8080:8080 jairoandre/jenkins
+    -p 8080:8080 jairoandre/jenkins-docker
