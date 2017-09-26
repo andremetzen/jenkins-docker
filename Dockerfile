@@ -12,6 +12,8 @@ RUN ./get-docker.sh \
     && apt-get clean \
     && /usr/local/bin/install-plugins.sh $(cat /tmp/plugins.txt)
 
+RUN apt-get update && apt-get install awscli -y
+
 #RUN echo "jenkins ALL=NOPASSWD: ALL" >> /etc/sudoers
 
 
